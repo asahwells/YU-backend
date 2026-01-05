@@ -17,6 +17,12 @@ app = FastAPI(
 )
 
 
+@app.get("/")
+async def health_check():
+    """Simple health check to wake up the service."""
+    return {"status": "ok", "message": "Service is active"}
+
+
 @app.on_event("startup")
 async def warm_model_cache() -> None:
     """Load the toxicity classification pipeline during startup to avoid request-time latency."""
