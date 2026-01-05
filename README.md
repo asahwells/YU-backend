@@ -1,3 +1,12 @@
+---
+title: Toxic Comment
+emoji: 👁
+colorFrom: indigo
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # YuChat NLP Backend
 
 ## 1. User Requirements Analysis
@@ -61,7 +70,7 @@ The system follows a layered architecture:
 ## 4. Interface Analysis
 
 ### 4.1 Data Exchange
-The system uses **JSON** over **HTTP** for all data exchange between the YuChat React Native client (APK) and the Render Backend.
+The system uses **JSON** over **HTTP** for all data exchange between the YuChat React Native client (APK) and the Hugging Face Space.
 
 **Input Interface (Client -> Server):**
 -   **Method**: `POST`
@@ -89,9 +98,9 @@ The system uses **JSON** over **HTTP** for all data exchange between the YuChat 
 ### 4.2 Deployment Infrastructure
 The interface is hosted on a cloud environment to support the mobile client.
 
--   **Platform**: Render Web Service
+-   **Platform**: Hugging Face Spaces
 -   **Runtime**: Docker Container (via Dockerfile)
--   **Resources**: Requires an instance with sufficient RAM (e.g., Render Standard Plan ~2GB+) to handle ML model memory requirements.
+-   **Resources**: Hugging Face Spaces (Standard CPU).
 -   **Client**: YuChat React Native APK.
 
 ---
