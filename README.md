@@ -61,7 +61,7 @@ The system follows a layered architecture:
 ## 4. Interface Analysis
 
 ### 4.1 Data Exchange
-The system uses **JSON** over **HTTP** for all data exchange between the YuChat React Native client (APK) and the AWS Backend.
+The system uses **JSON** over **HTTP** for all data exchange between the YuChat React Native client (APK) and the Render Backend.
 
 **Input Interface (Client -> Server):**
 -   **Method**: `POST`
@@ -87,11 +87,11 @@ The system uses **JSON** over **HTTP** for all data exchange between the YuChat 
     ```
 
 ### 4.2 Deployment Infrastructure
-The interface is hosted on a high-availability cloud environment to support the mobile client.
+The interface is hosted on a cloud environment to support the mobile client.
 
--   **Platform**: AWS EC2
--   **Instance Type**: `t3.medium` or `t3.large` (2–4 GB RAM) to handle ML model memory requirements.
--   **Storage**: EBS Volume modified to 20GB+ (from distinct 8GB default) to accommodate model weights and dependencies.
+-   **Platform**: Render Web Service
+-   **Runtime**: Docker Container (via Dockerfile)
+-   **Resources**: Requires an instance with sufficient RAM (e.g., Render Standard Plan ~2GB+) to handle ML model memory requirements.
 -   **Client**: YuChat React Native APK.
 
 ---
