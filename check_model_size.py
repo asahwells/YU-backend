@@ -6,7 +6,7 @@ import os
 import psutil
 import torch
 
-from app.services import get_toxicity_pipeline
+from app.services import get_model
 
 
 def format_bytes(bytes_value: int) -> str:
@@ -29,7 +29,7 @@ def main():
     print()
     
     print("Loading model...")
-    get_toxicity_pipeline()  # Forces cache to load it
+    get_model()  # Forces cache to load it
     print("Model loaded!")
     print()
     
