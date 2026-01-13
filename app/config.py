@@ -7,7 +7,7 @@ import os
 class Settings:
     # Default config
     model_name = "martin-ha/toxic-comment-model"
-    negative_threshold = 0.90
+    negative_threshold = 0.70
     api_title = "YuChat NLP Backend"
     api_description = "API for filtering toxic messages in YuChat."
     api_version = "1.0.0"
